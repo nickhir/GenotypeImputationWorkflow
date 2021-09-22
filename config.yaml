@@ -1,0 +1,19 @@
+config:
+  input_vcf_file: "michigan_imputation/vcf/cohort.recalibrated.vcf.gz"
+  output_directory_preprocesing: "preprocessed_vcfs"
+  HRC_reference: "michigan_imputation/HRC_reference.tab"
+  HRC_1000G_check_script: "michigan_imputation/HRC-1000G-check-bim.pl"
+  # Use `which plink` to get the path
+  plink_exe: " miniconda3/envs/plink/bin/plink"
+  # directory in which the plink file is
+  plink_dir: " miniconda3/envs/plink/bin/"
+  # Use `which bcftools` to get the path
+  bcftools_exe: " miniconda3/envs/utils/bin/bcftools"
+
+  # token, imputation_bot_exe, genome_build,r2Filter is only necessary if you want to use the submit_michigan_imputation.py script.
+  # On how to install everything see here: https://imputationserver.readthedocs.io/en/latest/workshops/ASHG2020/Session5/
+  # if you choose not to use them, simply but an empty string in their place
+  token: 'YOUR TOKEN'
+  imputation_bot_exe: "michigan_imputation/imputationbot/imputationbot"
+  genome_build: "hg19"
+  r2Filter: "0.3"
